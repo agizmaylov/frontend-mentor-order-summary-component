@@ -85,7 +85,7 @@ h2 {
 
     --font-n: clamp(0.9rem, 0.8rem + 0.5vw, 1rem);
     --font-s: calc(var(--font-n) * 0.9);
-    --font-l: calc(var(--font-n) * 1.6);
+    --font-l: calc(var(--font-n) * 1.8);
 }
 
 
@@ -185,12 +185,16 @@ h2 {
 .order-card__payment-button {
     width: 100%;
     padding: 1em 0;
-    margin-bottom: min(7vw, 2.4em);
+    --payment-button-margin-size: min(7vw, 2em);
+    margin-bottom: var(--payment-button-margin-size);
 
     background-color: var(--color-blue-700);
     color: var(--color-blue-50);
     border-radius: var(--plan-buttons-corners);
-    box-shadow: 0 1em 1em var(--color-blue-700-transparent);
+    box-shadow: 0
+                calc(var(--payment-button-margin-size) / 2)
+                calc(var(--payment-button-margin-size) / 2)
+                var(--color-blue-700-transparent);
 
     &:hover {
         background-color: var(--color-blue-400);
