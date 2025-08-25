@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="page-order">
+  <article class="order-card">
+    <img src="assets/images/illustration-hero.svg" alt=""
+         width="450" height="220"
+         class="order-card__hero-image"/>
+    <div class="order-card__container">
+      <h2 class="order-card__header">Order Summary</h2>
+      <p class="order-card__copy">
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </p>
+      <div class="plan">
+        <img src="assets/images/icon-music.svg" alt=""
+             width="48" height="48"
+             class="plan__music-icon"/>
+        <div class="plan__info-container">
+          <strong class="plan__type">Annual Plan</strong>
+          <span class="plan__cost">$59.99/year</span>
+        </div>
+        <a href="#" class="plan__change-link">Change</a>
+      </div>
+      <button type="button" class="order-card__payment-button">Proceed to Payment</button>
+      <button type="button" class="order-card__cancel-button">Cancel Order</button>
+    </div>
+  </article>
+</body>
+</html>

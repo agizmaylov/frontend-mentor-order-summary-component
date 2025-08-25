@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Red Hat Display";
+    src: local("Red Hat Display"),
+         local("RedHatDisplay"),
+         url(assets/fonts/RedHatDisplay-VariableFont_wght.woff2) format(woff2) tech(variations);
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*=== Normalize and reset ===*/
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+    line-height: 3.125ex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+h1,
+h2 {
+    line-height: 2.38ex;
+}
+/*=== Normalize and reset end ===*/
+
+:root {
+    --color-white: hsl(255, 100%, 100%);
+    --color-blue-50: hsl(225, 100%, 98%);
+    --color-blue-100: hsl(225, 100%, 94%);
+    --color-blue-400: hsl(244, 78%, 67%); /* Guess of the hover color. */
+    --color-blue-700: hsl(245, 75%, 52%);
+    --color-blue-700-transparent: hsla(245, 75%, 52%, 0.2);
+    --color-blue-950: hsl(223, 47%, 23%);
+    --color-gray-600: hsl(224, 23%, 55%);
+
+    --font-n: clamp(0.9rem, 0.8rem + 0.5vw, 1rem);
+    --font-s: calc(var(--font-n) * 0.9);
+    --font-l: calc(var(--font-n) * 1.6);
+}
+
+
+.page-order {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(assets/images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-color: var(--color-blue-100);
+}
+
+.order-card {
+    width: min(100%, 28.125rem);
+    margin: 1.5rem;
+    --order-card-corners: 1.2rem;
+    border-radius: var(--order-card-corners);
+
+    background-color: var(--color-white);
+    color: var(--color-gray-600);
+    box-shadow: 0 1rem 3rem var(--color-blue-700-transparent);
+
+    font-family: "Red Hat Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-n);
+    font-weight: 500;
+    text-align: center;
+}
+
+.order-card__hero-image {
+    height: auto;
+    border-radius: var(--order-card-corners) var(--order-card-corners) 0 0;
+}
+
+.order-card__container {
+    padding: min(10vw, 3rem) min(7vw, 3rem);
+    --plan-buttons-corners: 0.8rem;
+}
+
+.order-card__header {
+    margin-bottom: 0.8em;
+    color: var(--color-blue-950);
+    font-weight: 900;
+    font-size: var(--font-l);
+}
+
+.order-card__copy {
+    margin-bottom: 1.5em;
+}
+
+.plan {
+    margin-bottom: 2rem;
+    --plan-padding: min(4.5vw, 1.5rem);
+    padding: var(--plan-padding);
+    border-radius: var(--plan-buttons-corners);
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-blue-50);
+}
+
+.plan__music-icon {
+    margin-right: var(--plan-padding);
+}
+
+.plan__type {
+    display: block;
+    font-weight: 900;
+    color: var(--color-blue-950);
+    margin-bottom: 0.4em;
+}
+
+.plan__change-link {
+    margin-left: auto;
+    color: var(--color-blue-700);
+    font-size: var(--font-s);
+    font-weight: 700;
+
+    &:hover {
+        color: var(--color-blue-400);
+        text-decoration: none;
+    }
+}
+
+.order-card__payment-button,
+.order-card__cancel-button {
+    display: block;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.order-card__payment-button {
+    width: 100%;
+    padding: 1em 0;
+    margin-bottom: min(7vw, 2.4em);
+
+    background-color: var(--color-blue-700);
+    color: var(--color-blue-50);
+    border-radius: var(--plan-buttons-corners);
+    box-shadow: 0 1em 1em var(--color-blue-700-transparent);
+
+    &:hover {
+        background-color: var(--color-blue-400);
+    }
+}
+
+.order-card__cancel-button {
+    margin: 0 auto;
+    background-color: var(--color-white);
+    color: var(--color-gray-600);
+
+    &:hover {
+        color: var(--color-blue-950);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .page-order {
+        background-image: url(assets/images/pattern-background-mobile.svg);
+    }
+}
