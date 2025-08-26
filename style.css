@@ -153,6 +153,10 @@ h2 {
     margin-right: calc(var(--plan-padding) * 0.8);
 }
 
+.plan__info-container {
+    text-align: left;
+}
+
 .plan__type {
     display: block;
     font-weight: 900;
