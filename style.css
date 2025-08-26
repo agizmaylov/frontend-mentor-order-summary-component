@@ -150,7 +150,7 @@ h2 {
 }
 
 .plan__music-icon {
-    margin-right: var(--plan-padding);
+    margin-right: calc(var(--plan-padding) * 0.8);
 }
 
 .plan__type {
